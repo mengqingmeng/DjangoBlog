@@ -30,6 +30,7 @@ urlpatterns = [
     url('^notifications/', include('notifications.urls', namespace='notifications')),
     url(r'^likes/', include('likes.urls', namespace='pinax_likes')),
     url(r'', include('social_login.urls', namespace='social_login')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 if settings.DEBUG:

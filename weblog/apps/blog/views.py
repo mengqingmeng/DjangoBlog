@@ -6,7 +6,7 @@ from django.views.generic.edit import CreateView, FormView
 from django.views.generic.dates import YearArchiveView, MonthArchiveView
 from django.views.generic import TemplateView
 from django.utils.safestring import mark_safe
-
+import os,sys
 import markdown2
 
 from .models import Article, Category, Tag
@@ -14,7 +14,6 @@ from .models import Article, Category, Tag
 
 class IndexView(ListView):
     template_name = "blog/index.html"
-
     def get_queryset(self):
         return Article.objects.filter(status='p')
 

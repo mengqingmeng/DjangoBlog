@@ -41,3 +41,5 @@
         python manage.py runserver
 
 8. 浏览器输入 http://127.0.0.1:8000/
+################################################################
+加入codesnippets(需要将codesnippets，lineutils，widget 下载解压放在D:\Program Files\Python\Python35\Lib\site-packages\ckeditor\static\ckeditor\ckeditor\plugins内)

@@ -1,8 +1,7 @@
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.conf import settings
-
-
+from ckeditor_uploader.fields import RichTextUploadingField
 class Article(models.Model):
     STATUS_CHOICES = (
         ('d', '草稿'),
@@ -10,7 +9,8 @@ class Article(models.Model):
     )
 
     title = models.CharField('标题', max_length=200)
-    body = models.TextField('正文')
+    #body = models.TextField('正文')
+    body = RichTextUploadingField('正文')
     created_time = models.DateTimeField('创建时间', auto_now_add=True)
     last_mod_time = models.DateTimeField('修改时间', auto_now=True)
     pub_time = models.DateTimeField('发布时间', blank=True, null=True,

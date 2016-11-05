@@ -14,7 +14,10 @@ import os
 import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#os.path.abspath(__file__)获取该文件的绝对路径（含文件名）D:\Workspaces\PyCharm\DjangoBlog\weblog\apps\blog\views.py
+#os.path.dirname(os.path.abspath(__file__)) 获取该文件/目录所在目录 D:\Workspaces\PyCharm\DjangoBlog\weblog\apps\blog
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  #/apps
 sys.path.append(os.path.join(BASE_DIR, '../weblog/apps'))
 sys.path.append(os.path.join(BASE_DIR, '../weblog/config'))
 
@@ -50,6 +53,8 @@ INSTALLED_APPS = [
     'comments',
     'accounts',
     'social_login',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 SITE_ID = 1
@@ -132,7 +137,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
 
-LANGUAGE_CODE = 'zh-hans'
+LANGUAGE_CODE = 'zh-cn'
 
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -140,7 +145,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
@@ -178,6 +183,17 @@ LOGIN_URL = '/login/'
 MEDIA_ROOT = 'weblog/media/'
 MEDIA_URL = '/media/'
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_CONFIGS = {
+
+    'default': {
+        'toolbar': 'full',
+        'extraPlugins': ','.join(
+            [
+               'codesnippet'
+            ]),
+    },
+}
 # social user settings
 SOCIALOAUTH_SITES = (
     ('weibo', 'socialoauth.sites.weibo.Weibo', '新浪微博',
