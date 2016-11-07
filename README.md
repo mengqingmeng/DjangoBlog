@@ -30,15 +30,15 @@
 5. 迁移数据库，在 manage.py 所在目录执行
 
         python3 manage.py makemigrations
-        python manage.py migrate
+        python3 manage.py migrate
 
 6. 类似步骤4，运行命令创建超级用户
     
-        python manage.py createsuperuser
+        python3 manage.py createsuperuser
 
 7. 类似步骤4、5，在 manage.py 所在目录执行
 
-        python manage.py runserver
+        python3 manage.py runserver
 
 8. 浏览器输入 http://127.0.0.1:8000/
 ################################################################

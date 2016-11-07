@@ -91,7 +91,7 @@ ENV/
 .ropeproject
 
 database/
-static/
+
 media/
 .idea
 whoosh_index
