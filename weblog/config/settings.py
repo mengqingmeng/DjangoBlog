@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     'social_login',
     'ckeditor',
     'ckeditor_uploader',
-    'django_notifications',
 ]
 
 SITE_ID = 1
