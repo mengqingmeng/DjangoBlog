@@ -29,7 +29,7 @@
 4. 命令行执行 pip install -r requirements.txt（注意在 requirements.txt 所在目录下执行，否则请输入完整路径名）安装依赖包（项目依赖 pillow，确保你的环境能够安装 pillow）
 5. 迁移数据库，在 manage.py 所在目录执行
 
-        python manage.py makemigrations
+        python3 manage.py makemigrations
         python manage.py migrate
 
 6. 类似步骤4，运行命令创建超级用户
@@ -42,4 +42,6 @@
 
 8. 浏览器输入 http://127.0.0.1:8000/
 ################################################################
-加入codesnippets(需要将codesnippets，lineutils，widget 下载解压放在D:\Program Files\Python\Python35\Lib\site-packages\ckeditor\static\ckeditor\ckeditor\plugins内)
+9.加入django-ckeditor
+	windows pip安装之后 如果安装插件
+	加入codesnippets(需要将codesnippets，lineutils，widget 下载解压放在D:\Program Files\Python\Python35\Lib\site-packages\ckeditor\static\ckeditor\ckeditor\plugins内)
