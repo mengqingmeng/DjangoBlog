@@ -91,10 +91,13 @@ ENV/
 .ropeproject
 
 database/
-static/
+
 media/
 .idea
 whoosh_index
 
 migrations/
 !migrations/__init__.py
+
+.project
+.pydevproject
