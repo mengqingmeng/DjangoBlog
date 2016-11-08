@@ -15,8 +15,7 @@ from .models import Article, Category, Tag
 class IndexView(ListView):
     template_name = "blog/index.html"
     def get_queryset(self):
-        base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        print("base:"+os.path.join(base, 'static'))
+
         return Article.objects.filter(status='p')
 
 
